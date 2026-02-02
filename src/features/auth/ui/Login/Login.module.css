@@ -1,0 +1,5 @@
+/*Стили сообщения об ошибки*/
+.errorMessage {
+    color: red;
+    font-size: 14px;
+}
