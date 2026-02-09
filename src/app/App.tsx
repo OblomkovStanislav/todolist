@@ -4,10 +4,9 @@ import {Header} from "common/components/Header/Header";
 import {CircularProgressContainer, ErrorSnackbar} from "common/components";
 import {Routing} from "common/routing";
 import {useAppDispatch, useAppSelector} from "common/hooks";
-import {initializedTC} from "../features/auth/model/auth-reducer";
-import {selectIsInitialized} from "../features/auth/model/auth-selectors";
+import {initializedTC, selectIsInitialized} from "../features/auth/model/authSlice";
 
-function AppWithRedux() {
+function App() {
     const dispatch = useAppDispatch();
     const isInitialized = useAppSelector(selectIsInitialized);
 
@@ -28,4 +27,4 @@ function AppWithRedux() {
     );
 }
 
-export default AppWithRedux;
+export default App;

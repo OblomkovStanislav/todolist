@@ -3,10 +3,10 @@ import {useAppDispatch} from "common/hooks";
 import {Checkbox, ListItem} from "@mui/material";
 import {blue, green} from "@mui/material/colors";
 import {EditableTitle} from "common/components";
-import {changeTaskTC, removeTaskTC} from "../../../../../model/tasks-reducer";
+import {changeTaskTC, removeTaskTC} from "../../../../../model/tasksSlice";
 import type {DomainTask, UpdateTaskModel} from "../../../../../api/taskApi.types";
 import {TaskStatus} from "../../../../../lib/enums";
-import type {RequestStatus} from "../../../../../../../app/app-reducer";
+import type {RequestStatus} from "../../../../../../../app/appSlice";
 
 //Типизация props
 type TaskProps = {

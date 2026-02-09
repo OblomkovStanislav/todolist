@@ -3,7 +3,7 @@ import {IconButton, Input, Stack} from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import DoneIcon from "@mui/icons-material/Done";
-import type {RequestStatus} from "../../../app/app-reducer";
+import type {RequestStatus} from "../../../app/appSlice";
 
 //Типизация props
 type EditableTitleProps = {

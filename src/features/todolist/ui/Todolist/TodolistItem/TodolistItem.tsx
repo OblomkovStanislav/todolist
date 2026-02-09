@@ -3,9 +3,9 @@ import {AddItemForm} from "common/components";
 import {TodolistTitle} from "./TodolistTitle/TodolistTitle";
 import {FilterButtons} from "./FilterButtons/FilterButtons";
 import {Tasks} from "./Tasks/Tasks";
-import {addTaskTC} from "../../../model/tasks-reducer";
+import {addTaskTC} from "../../../model/tasksSlice";
 import {useAppDispatch} from "common/hooks";
-import type {DomainTodolist} from "../../../model/todolist-reducer";
+import type {DomainTodolist} from "../../../model/todolistSlice";
 import {TodolistPaperStyled} from "./TodolistPaperStyled";
 
 //Типизация props

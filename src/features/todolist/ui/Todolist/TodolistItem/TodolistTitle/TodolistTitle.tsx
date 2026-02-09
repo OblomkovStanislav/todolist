@@ -1,6 +1,6 @@
 import React from "react";
 import {EditableTitle} from "common/components";
-import {changeTodolistTitleTC, type DomainTodolist, removeTodolistTC} from "../../../../model/todolist-reducer";
+import {changeTodolistTitleTC, type DomainTodolist, removeTodolistTC} from "../../../../model/todolistSlice";
 import {useAppDispatch} from "common/hooks";
 
 //Типизация props

@@ -1,5 +1,5 @@
-import {addTodolistAC, type DomainTodolist, todolistReducer} from "../todolist-reducer";
-import {tasksReducer, TasksType} from "../tasks-reducer";
+import {addTodolist, type DomainTodolist, todolistReducer} from "../todolistSlice";
+import {tasksReducer, TasksType} from "../tasksSlice";
 
 test("ids should be equals", () => {
     const startTasksState: TasksType = {};
@@ -11,9 +11,10 @@ test("ids should be equals", () => {
         addedDate: "",
         order: 1,
         filter: "all",
+        entityStatus: "idle",
     };
 
-    const action = addTodolistAC(todolist);
+    const action = addTodolist({todolist});
 
     const endTasksState = tasksReducer(startTasksState, action);
     const endTodolistState = todolistReducer(startTodolistState, action);

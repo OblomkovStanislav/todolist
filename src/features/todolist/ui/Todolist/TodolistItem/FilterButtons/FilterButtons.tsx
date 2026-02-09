@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {changeTodolistFilterAC, type DomainTodolist, FilterType} from "../../../../model/todolist-reducer";
+import {changeTodolistFilter, type DomainTodolist, FilterType} from "../../../../model/todolistSlice";
 import {useAppDispatch} from "common/hooks";
 import {BottomNavigation, BottomNavigationAction, Box} from "@mui/material";
 import RuleIcon from "@mui/icons-material/Rule";
@@ -15,8 +15,8 @@ export const FilterButtons = ({todolist}: FilterButtonsProps) => {
     const dispatch = useAppDispatch();
 
     //Функция изменения фильтра списка задач
-    const changeTodolistFilter = (filter: FilterType) =>
-        dispatch(changeTodolistFilterAC({todolistId: todolist.id, filter})); //Функция изменения фильтра списка дел
+    const changeTodolistFilterHandler = (filter: FilterType) =>
+        dispatch(changeTodolistFilter({todolistId: todolist.id, filter})); //Функция изменения фильтра списка дел
 
     return (
         <Box>
@@ -30,19 +30,19 @@ export const FilterButtons = ({todolist}: FilterButtonsProps) => {
                 <BottomNavigationAction
                     label="Все"
                     icon={<RuleIcon />}
-                    onClick={() => changeTodolistFilter("all")}
+                    onClick={() => changeTodolistFilterHandler("all")}
                     sx={{color: "#fff"}}
                 />
                 <BottomNavigationAction
                     label="Активные"
                     icon={<CrisisAlertIcon />}
-                    onClick={() => changeTodolistFilter("active")}
+                    onClick={() => changeTodolistFilterHandler("active")}
                     sx={{color: "#fff"}}
                 />
                 <BottomNavigationAction
                     label="Выполненные"
                     icon={<TaskAltIcon />}
-                    onClick={() => changeTodolistFilter("completed")}
+                    onClick={() => changeTodolistFilterHandler("completed")}
                     sx={{color: "#fff"}}
                 />
             </BottomNavigation>

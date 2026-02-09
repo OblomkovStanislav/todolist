@@ -1,6 +1,6 @@
 import React, {ChangeEvent, useState} from "react";
 import {Button, Stack} from "@mui/material";
-import type {RequestStatus} from "../../../app/app-reducer";
+import type {RequestStatus} from "../../../app/appSlice";
 import {TextFieldStyled} from "common/components";
 
 //Типизация props

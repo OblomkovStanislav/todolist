@@ -1,12 +1,12 @@
 import {Container, Grid2} from "@mui/material";
 import {AddItemForm} from "common/components";
 import React from "react";
-import {addTodolistTC} from "../features/todolist/model/todolist-reducer";
+import {addTodolistTC} from "../features/todolist/model/todolistSlice";
 import {useAppDispatch, useAppSelector} from "common/hooks";
 import {Todolist} from "../features/todolist/ui/Todolist/Todolist";
 import {Navigate} from "react-router";
 import {Path} from "common/routing";
-import {selectIsLoggedIn} from "../features/auth/model/auth-selectors";
+import {selectIsLoggedIn} from "../features/auth/model/authSlice";
 
 //Основной компонент приложения
 export const Main = () => {

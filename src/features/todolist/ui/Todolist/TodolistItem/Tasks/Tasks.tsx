@@ -1,10 +1,9 @@
 import React, {useEffect} from "react";
 import {useAppDispatch, useAppSelector} from "common/hooks";
 import {List} from "@mui/material";
-import {selectTasks} from "../../../../model/tasks-selectors";
 import {Task} from "./Task/Task";
-import type {DomainTodolist} from "../../../../model/todolist-reducer";
-import {setTasksTC} from "../../../../model/tasks-reducer";
+import type {DomainTodolist} from "../../../../model/todolistSlice";
+import {selectTasks, setTasksTC} from "../../../../model/tasksSlice";
 import {TaskStatus} from "../../../../lib/enums";
 
 //Типизация props

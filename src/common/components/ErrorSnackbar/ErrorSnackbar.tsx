@@ -2,9 +2,8 @@ import Snackbar, {SnackbarCloseReason} from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import {type SyntheticEvent} from "react";
 import {useSelector} from "react-redux";
-import {selectError} from "../../../app/app-selectors";
 import {useAppDispatch} from "common/hooks";
-import {setAppErrorAC} from "../../../app/app-reducer";
+import {selectError, setAppError} from "../../../app/appSlice";
 
 //Компонент уведомления об ошибке
 export const ErrorSnackbar = () => {
@@ -17,7 +16,7 @@ export const ErrorSnackbar = () => {
             return;
         }
 
-        dispatch(setAppErrorAC(null));
+        dispatch(setAppError({error: null}));
     };
 
     return (

@@ -1,10 +1,9 @@
 import {AppBar, Box, Button, IconButton, LinearProgress, Toolbar} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import React from "react";
-import {selectStatus} from "../../../app/app-selectors";
 import {useAppDispatch, useAppSelector} from "common/hooks";
-import {logoutTC} from "../../../features/auth/model/auth-reducer";
-import {selectIsLoggedIn} from "../../../features/auth/model/auth-selectors";
+import {logoutTC, selectIsLoggedIn} from "../../../features/auth/model/authSlice";
+import {selectStatus} from "../../../app/appSlice";
 
 //Компонент шапки приложения
 export const Header = () => {
